@@ -60,6 +60,32 @@
 .bold {
     font-weight: bold;
 }
+
+.msg-container {
+    background-color: #000;
+    padding: 15px;
+}
+
+.msg{
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    border: solid 1px #000;
+    text-align: center;
+}
+
+.msg.erro{
+    color: #ff0000;
+    background-color: #ffa600;
+    border-color: #fffb00;
+}
+
+.msg.sucesso{
+    color: lime;
+    background-color: #0004ff;
+    border-color: #00d9ff;
+}
+
 /* HOME */
 
 #main-container{
@@ -69,6 +95,46 @@
     padding: 40px;
 }
 
+/* LOGIN */
+
+#auth-row{
+    justify-content: space-around;
+}
+
+#login-container h2,
+#register-container h2{
+    text-align: center;
+    border-bottom: 2px solid #984cee;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#login-container form,
+#register-container form{
+    max-width:400px;
+    margin: 30px auto;
+}
+
+.form-group{
+    margin-top: 6px;
+}
+
+.card-btn{
+    margin-top: 4%;
+    width: 100%;
+    color: #000;
+    background-color: #00d9ff;
+    border-color: blue;
+    transition: .5s;
+}
+
+.card-btn:hover{
+    width: 100%;
+    color: #984cee;
+    background-color: transparent;
+    border-color: #984cee;
+}
 /* FOOTER */
 
 #footer{
