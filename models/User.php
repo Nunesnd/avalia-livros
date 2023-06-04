@@ -11,6 +11,14 @@
         public $bio;
         public $token;
 
+        public function generateToken(){
+            return bin2hex(random_bytes(50));
+        }
+
+        public function generatePassword($password){
+            return password_hash($password, PASSWORD_DEFAULT);
+        }
+
     }
 
     interface iUserDAO{
@@ -24,6 +32,7 @@
         public function findEmail($email);
         public function findId($id);
         public function findToken($token);
+        public function destroyToken();
         public function changePassword(User $user);
 
     }

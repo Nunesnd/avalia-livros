@@ -27,7 +27,20 @@
 
                 if($userDao->findLogin($login) === false){
 
-                    echo "ESTOU AQUI";
+                    $user = new User();
+
+                    $userToken = $user->generateToken();
+                    $finalPassword = $user->generatePassword($password);
+
+                    $user->nome = $name;
+                    $user->login = $login;
+                    $user->email = $email;
+                    $user->senha = $finalPassword;
+                    $user->token = $userToken;
+
+                    $auth = true;
+
+                    $userDao->create($user, $auth);
 
                 }else{
                     $message->setMessage("Login já está cadastrado", "error", "back");

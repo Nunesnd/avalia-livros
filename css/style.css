@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+
+/* CABEÇALHO */
 .navbar-brand{
     position: relative;
 }
@@ -55,6 +57,10 @@
 
 #navbar .navbar-nav .nav-item .nav-link:hover{
     color: #00d9ff;
+}
+
+.naveg-fim{
+    margin-right: 20px;
 }
 
 .bold {
